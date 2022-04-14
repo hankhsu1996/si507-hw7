@@ -1,0 +1,21 @@
+<h1>Hello, {{name}}!</h1>
+<div>Today's technology headlines are...</div>
+<!-- Make an HTML table -->
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Thumbnail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Make a table row for each headline -->
+        {% for headline in headlines %}
+            <tr>
+                <td><a href="{{ headline['url'] }}" target="_blank">{{ headline['title'] }}</a></td>
+                <!-- make an image tag in td -->
+                <td><img src="{{ headline['thumbnail'] }}" alt="{{ headline['title'] }}" width="300" height="200"></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

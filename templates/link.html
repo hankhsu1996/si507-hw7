@@ -1,0 +1,7 @@
+<h1>Hello, {{name}}!</h1>
+<div>Today's technology headlines are...</div>
+<ol>
+    {% for headline in headlines %}
+        <li><a href="{{ headline['url'] }}" target="_blank">{{ headline['title'] }}</a></li>
+    {% endfor %}
+</ol>
